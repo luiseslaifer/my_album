@@ -1,6 +1,11 @@
-<!--{{ object_list }}--> <!-- para imprimir (echo)-->
-<h1>ALBUM</h1>
-<H2>Category</H2>
+{% extends "base.html" %}
+{% block section %}
+
+<h2> Category </h2>
+<HR>
+{% endblock section %}
+{% block maincontent %}
+
 <div>
 	{% for c in object_list %}
 	<a href="{% url 'category-detail' c.pk %}">
@@ -8,3 +13,4 @@
 	</a>
 	{% endfor %}
 </div>
+{% endblock maincontent %}
