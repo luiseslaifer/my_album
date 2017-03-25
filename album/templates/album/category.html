@@ -1,0 +1,10 @@
+<!--{{ object_list }}--> <!-- para imprimir (echo)-->
+<h1>ALBUM</h1>
+<H2>Category</H2>
+<div>
+	{% for c in object_list %}
+	<a href="{% url 'category-detail' c.pk %}">
+		{{ c.name }}
+	</a>
+	{% endfor %}
+</div>
